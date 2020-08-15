@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "baseUrl": "./",
+    "outDir": "build",
+    "target": "es6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": [
+      "es6",
+      "DOM"
+    ],
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": false,
+    "sourceMap": true
+  },
+  "include": [
+    "server/**.ts",
+    "server/*/**.ts",
+    "server/*/*/**.ts",
+  ],
+  "exclude": [
+    "./client"
+  ]
+}

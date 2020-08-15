@@ -4,7 +4,11 @@
   "description": "A portfolio of professional, creative, and personal work.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node build/index.js",
+    "server": "ts-node server/index.ts",
+    "build": "rm -rf build && tsc --watch",
+    "iall": "npm i && npm --prefix client i",
+    "startboth": "npm run server & npm run client"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,8 @@
   },
   "homepage": "https://github.com/wpreble1/portfolio#readme",
   "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
@@ -24,7 +30,7 @@
     "@types/express": "^4.17.7",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
-    "eslint": "^7.7.0",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
