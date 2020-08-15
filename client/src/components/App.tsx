@@ -1,11 +1,21 @@
 import React from 'react';
-import '../styles/App.css';
+import axios from 'axios';
+
+import ProjectList from './ProjectList';
 
 function App() {
+  const something = () => {
+    console.log('i was clicked');
+    axios.get('/resume').then(({ data }) => {
+      console.log(data);
+    });
+  };
+
   return (
-    <div className="App">
-      <h1>Will Preble</h1>
+    <div className="">
+      <button className="" type="submit" onClick={something}>Will Preble</button>
       <h1>Info</h1>
+      <ProjectList />
     </div>
   );
 }
