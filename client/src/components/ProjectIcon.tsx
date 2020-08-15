@@ -1,28 +1,21 @@
-import React, { FC, ReactElement, useState, useEffect } from 'react';
+import React, { FC } from 'react';
 
-interface ProjectIconProps {
-  user: {
-    id: number,
-    nameFirst: string,
-    nameLast: string,
-    username: string,
-    email: string,
-    avatar: string,
-    googleId: string,
-  };
+interface Project {
+  title: string;
+  src: string;
+  alt: string;
 }
 
-const ProjectIcon: FC<ProjectIconProps> = ({
-  user,
-}): ReactElement => {
-  const [example, setExample] = useState();
+interface ProjectIconProps {
+  project: Project;
+}
 
-  useEffect(() => {
-  });
-
+const ProjectIcon: FC<ProjectIconProps> = ({ project }) => {
+  const { title, src, alt } = project;
   return (
-    <div className="">
-      {user}
+    <div className="p-4">
+      <img className="min-w-0 min-h-0" src={src} alt={alt} width="300px" />
+      <p className="pt-2 uppercase font-mono hover:font-bold text-sm">{title}</p>
     </div>
   );
 };
