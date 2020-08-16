@@ -19,36 +19,44 @@ const ProjectList: FC<ProjectListProps> = () => {
       title: 'Up Close',
       src: uc,
       alt: '',
+      url: 'up-close',
     },
     {
       title: 'Organize Power',
       src: op,
       alt: '',
+      url: 'organize-power',
     },
     {
       title: 'Crawl',
       src: crawl,
       alt: '',
+      url: 'crawl',
     },
     {
       title: 'Escape Extinction',
       src: ees,
       alt: 'escape extinction sharks gif',
+      url: 'escape-extinction',
     },
     {
       title: 'Abita Springs Hotel',
       src: ash,
       alt: '',
+      url: 'abita-springs-hotel',
     },
     {
       title: 'Arthur Ashe Stadium',
       src: aas,
       alt: '',
+      url: 'arthur-ashe',
     },
     {
       title: '4 Times Square',
       src: fts,
       alt: '',
+      url: 'times-square',
+      photoCredit: 'https://www.instagram.com/lightsensitivity/',
     },
   ];
 
