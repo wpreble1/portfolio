@@ -4,4 +4,6 @@ export interface Project {
   alt: string;
   url: string;
   photoCredit?: string;
+  images: string[];
+  text: string[];
 }
