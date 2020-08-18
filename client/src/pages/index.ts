@@ -7,3 +7,4 @@ export { default as InfoPage } from './InfoPage';
 export { default as OrganizePower } from './OrganizePower';
 export { default as TimesSquare } from './TimesSquare';
 export { default as UpClose } from './UpClose';
+export { default as ProjectPage } from './ProjectPage';
