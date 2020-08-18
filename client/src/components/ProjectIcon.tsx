@@ -10,11 +10,11 @@ interface ProjectIconProps {
 const ProjectIcon: FC<ProjectIconProps> = ({ project }) => {
   const { title, src, alt, url } = project;
   return (
-    <div className="p-4">
+    <div className="p-4 hover:font-bold w-full md:w-1/2 lg:w-1/3">
       <Link to={`/${url}`}>
-        <img className="min-w-0 min-h-0" src={src} alt={alt} width="300px" />
+        <img className="w-full" src={src} alt={alt} />
       </Link>
-      <p className="pt-2 uppercase font-mono hover:font-bold text-sm">{title}</p>
+      <p className="pt-2 uppercase font-mono text-sm">{title}</p>
     </div>
   );
 };
