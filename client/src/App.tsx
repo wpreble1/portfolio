@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { Nav, SlideDrawer } from './components';
-import projects from './projectData';
+import { projects } from './projectData';
 
 import {
   // AbitaSpringsHotel,
@@ -37,7 +37,7 @@ function App() {
         {/* Project Pages */}
         <Route
           path="/abita-springs-hotel"
-          render={(props) => <ProjectPage project={projects[4]} />}
+          render={(props) => <ProjectPage project={projects.ash} />}
         />
         <Route path="/arthur-ashe" component={ArthurAshe} />
         <Route path="/crawl" component={Crawl} />

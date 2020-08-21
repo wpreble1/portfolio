@@ -1,74 +1,215 @@
-import ees from './images/ees.gif';
-import fts from './images/4ts-square-1.jpg';
-import aas from './images/aas-square-1.jpg';
-import ash from './images/ash-sq-1.jpg';
-import crawl from './images/crawl square-1.jpg';
-import uc from './images/uc-sq-1.jpg';
-import op from './images/op-sq-1.jpg';
+// Tile Images and Gifs
+import ees from './images/ees/ees-tile.gif';
+import fts from './images/fts/fts-tile.jpg';
+import aas from './images/aas/aas-tile.jpg';
+import ash from './images/ash/ash-tile.jpg';
+import crawlJpg from './images/crawl/crawl-tile.jpg';
+import uc from './images/uc/uc-tile.jpg';
+import op from './images/op/op-tile.jpg';
 
-import ash1 from './images/ash/project-1.jpg';
+// Content Images and Gifs
+import ash1 from './images/ash/ash-1.jpg';
 
-const projects = [
-  {
-    title: 'Up Close',
+import { Project } from './components/types';
+
+const upClose: Project = {
+  collaborators: {
+    'Clayton Christensen': '',
+    'James Rosier': '',
+    'Kris Mason': '',
+    'Naseer Hines': '',
+  },
+  content: [
+    {
+      alt: 'Gif of video chat project upClose',
+      imageSrc: uc,
+      imageCredit: null,
+      text: 'Some text about the project',
+    },
+    {
+      imageSrc: null,
+      imageCredit: null,
+      text: 'Some more text about the project',
+    },
+  ],
+  link: 'https://upclose.uc.r.appspot.com/',
+  press: null,
+  tile: {
+    alt: 'Gif of upClose project showing circular avatars moving around on a square',
     src: uc,
-    alt: '',
-    url: 'up-close',
-    images: [],
-    text: [],
   },
-  {
-    title: 'Organize Power',
+  title: 'Up Close',
+  url: 'up-close',
+};
+
+const organizePower: Project = {
+  collaborators: null, /* {
+    'Name': 'Link',
+  }, */
+  content: [
+    {
+      imageSrc: null,
+      imageCredit: null,
+      text: 'Some text about the project',
+    },
+  ],
+  link: '',
+  press: null,
+  tile: {
+    alt: '',
     src: op,
-    alt: '',
-    url: 'organize-power',
-    images: [],
-    text: [],
   },
-  {
-    title: 'Crawl',
-    src: crawl,
+  title: 'Organize Power',
+  url: 'organize-power',
+};
+
+const crawl: Project = {
+  collaborators: null, /* {
+    'Name': 'Link',
+  }, */
+  content: [
+    {
+      imageSrc: null,
+      imageCredit: null,
+      text: 'Some text about the project',
+    },
+  ],
+  link: '',
+  press: null,
+  tile: {
     alt: '',
-    url: 'crawl',
-    images: [],
-    text: [],
+    src: crawlJpg,
   },
-  {
-    title: 'Escape Extinction',
+  title: 'Crawl',
+  url: 'crawl',
+};
+
+const escapeExtinction: Project = {
+  collaborators: null, /* {
+    'Name': 'Link',
+  }, */
+  content: [
+    {
+      imageSrc: null,
+      imageCredit: null,
+      text: 'Some text about the project',
+    },
+  ],
+  link: 'https://escape-extinction.com/',
+  press: {
+    'A new escape room experience where you can save sharks!': 'https://wgno.com/news/a-new-escape-room-experience-where-you-can-save-sharks/',
+  },
+  tile: {
+    alt: '',
     src: ees,
-    alt: 'escape extinction sharks gif',
-    url: 'escape-extinction',
-    images: [],
-    text: [],
   },
-  {
-    title: 'Abita Springs Hotel',
+  title: 'Escape Extinction: Sharks!',
+  url: 'escape-extinction',
+};
+
+const escapeMyRoom: Project = {
+  collaborators: null,
+  content: [
+    {
+      imageSrc: null,
+      imageCredit: null,
+      text: 'Some text about the project',
+    },
+  ],
+  link: 'https://escapemyroom.com/',
+  press: {
+    'Audubon Zoo unveils new lion exhibit to public': 'https://www.nola.com/news/article_0607ac5d-a1ee-5e1c-bff1-f079b92d5c4c.html'
+  },
+  tile: {
+    alt: '',
+    src: '',
+  },
+  title: 'Escape My Room',
+  url: 'escape-my-room',
+};
+
+const abitaSpringsHotel: Project = {
+  collaborators: null, /* {
+    'Name': 'Link',
+  }, */
+  content: [
+    {
+      imageSrc: ash1,
+      imageCredit: null,
+      text: 'Some text about the project',
+    },
+  ],
+  link: 'https://www.abitaspringshotel.com/',
+  press: {
+    'Historic Abita Springs Hotel adds something new': 'https://www.nola.com/archive/article_fd22b699-5c4f-5e14-8f91-ad1807e7ca64.html',
+    'New Abita Springs gallery hosts first official exhibition': 'https://www.nola.com/news/northshore/article_06045d29-e179-5920-a286-4110ad2ca19f.html',
+  },
+  tile: {
+    alt: '',
     src: ash,
-    alt: '',
-    url: 'abita-springs-hotel',
-    images: [ash1],
-    text: [
-      'This is some text about the Abita Springs Hotel.',
-      'This is some more text about the Abita Springs Hotel...',
-    ],
   },
-  {
-    title: 'Arthur Ashe Stadium',
+  title: 'Abita Springs Hotel',
+  url: 'abita-springs-hotel',
+};
+
+const arthurAsheStadium: Project = {
+  collaborators: null, /* {
+    'Name': 'Link',
+  }, */
+  content: [
+    {
+      imageSrc: null,
+      imageCredit: null,
+      text: 'Some text about the project',
+    },
+  ],
+  link: '',
+  press: null,
+  tile: {
+    alt: '',
     src: aas,
-    alt: '',
-    url: 'arthur-ashe',
-    images: [],
-    text: [],
   },
-  {
-    title: '4 Times Square',
+  title: 'Arthur Ashe Stadium',
+  url: 'arthur-ashe',
+};
+
+const fourTimesSquare: Project = {
+  collaborators: null,
+  content: [
+    {
+      imageSrc: null,
+      imageCredit: 'https://www.instagram.com/lightsensitivity/',
+      text: 'Some text about the project',
+    },
+  ],
+  link: '',
+  press: null,
+  tile: {
+    alt: '',
     src: fts,
-    alt: '',
-    url: 'times-square',
-    photoCredit: 'https://www.instagram.com/lightsensitivity/',
-    images: [],
-    text: [],
   },
+  title: '4 Times Square',
+  url: 'times-square',
+};
+
+export const displayOrder: string[] = [
+  'uc',
+  'op',
+  'crawl',
+  'ees',
+  'emr',
+  'ash',
+  'aas',
+  'fts',
 ];
 
-export default projects;
+export const projects: {[key: string]: Project} = {
+  uc: upClose,
+  op: organizePower,
+  crawl,
+  ees: escapeExtinction,
+  emr: escapeMyRoom,
+  ash: abitaSpringsHotel,
+  aas: arthurAsheStadium,
+  fts: fourTimesSquare,
+};
