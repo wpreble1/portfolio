@@ -8,7 +8,8 @@ interface ProjectIconProps {
 }
 
 const ProjectIcon: FC<ProjectIconProps> = ({ project }) => {
-  const { title, src, alt, url } = project;
+  const { tile, title, url } = project;
+  const { alt, src } = tile;
   return (
     <div className="p-4 hover:font-bold w-full md:w-1/2 lg:w-1/3">
       <Link to={`/${url}`}>
