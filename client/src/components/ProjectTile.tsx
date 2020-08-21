@@ -8,14 +8,17 @@ interface ProjectIconProps {
 }
 
 const ProjectIcon: FC<ProjectIconProps> = ({ project }) => {
-  const { tile, title, url } = project;
+  const { tile, title, url, role } = project;
   const { alt, src } = tile;
   return (
-    <div className="p-4 hover:font-bold w-full md:w-1/2 lg:w-1/3">
+    <div className="pt-8 w-full md:w-1/2 md:p-6 hover:tracking-widest lg:p-12 hover:text-gray-600">
       <Link to={`/${url}`}>
         <img className="w-full" src={src} alt={alt} />
+        <div className="flex items-baseline justify-between">
+          <p className="pt-2 lg:pt-6 font-sans text-lg inline-block">{title}</p>
+          <p className="inline-block text-xs">{role}</p>
+        </div>
       </Link>
-      <p className="pt-2 uppercase font-mono text-sm">{title}</p>
     </div>
   );
 };

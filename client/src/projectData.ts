@@ -34,6 +34,7 @@ const upClose: Project = {
   ],
   link: 'https://upclose.uc.r.appspot.com/',
   press: null,
+  role: 'Full-Stack Development',
   tile: {
     alt: 'Gif of upClose project showing circular avatars moving around on a square',
     src: uc,
@@ -55,6 +56,7 @@ const organizePower: Project = {
   ],
   link: '',
   press: null,
+  role: 'Full-Stack Development',
   tile: {
     alt: '',
     src: op,
@@ -76,6 +78,7 @@ const crawl: Project = {
   ],
   link: '',
   press: null,
+  role: 'Full-Stack Development',
   tile: {
     alt: '',
     src: crawlJpg,
@@ -99,11 +102,12 @@ const escapeExtinction: Project = {
   press: {
     'A new escape room experience where you can save sharks!': 'https://wgno.com/news/a-new-escape-room-experience-where-you-can-save-sharks/',
   },
+  role: 'Automation Design',
   tile: {
     alt: '',
     src: ees,
   },
-  title: 'Escape Extinction: Sharks!',
+  title: 'Escape Extinction',
   url: 'escape-extinction',
 };
 
@@ -120,6 +124,7 @@ const escapeMyRoom: Project = {
   press: {
     'Audubon Zoo unveils new lion exhibit to public': 'https://www.nola.com/news/article_0607ac5d-a1ee-5e1c-bff1-f079b92d5c4c.html'
   },
+  role: 'Automation Design',
   tile: {
     alt: '',
     src: '',
@@ -144,6 +149,7 @@ const abitaSpringsHotel: Project = {
     'Historic Abita Springs Hotel adds something new': 'https://www.nola.com/archive/article_fd22b699-5c4f-5e14-8f91-ad1807e7ca64.html',
     'New Abita Springs gallery hosts first official exhibition': 'https://www.nola.com/news/northshore/article_06045d29-e179-5920-a286-4110ad2ca19f.html',
   },
+  role: 'Design–Build',
   tile: {
     alt: '',
     src: ash,
@@ -165,6 +171,7 @@ const arthurAsheStadium: Project = {
   ],
   link: '',
   press: null,
+  role: 'Mechanical Engineering',
   tile: {
     alt: '',
     src: aas,
@@ -184,6 +191,7 @@ const fourTimesSquare: Project = {
   ],
   link: '',
   press: null,
+  role: 'Mechanical Engineering',
   tile: {
     alt: '',
     src: fts,

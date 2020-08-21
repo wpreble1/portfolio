@@ -1,11 +1,6 @@
-export interface Project {
-  collaborators?: {[key: string]: string} | null;
-  content: Section[];
-  link: string;
-  press?: {[key: string]: string} | null;
-  tile: Tile;
-  title: string;
-  url: string;
+interface Tile {
+  alt: string;
+  src: string;
 }
 
 interface Section {
@@ -15,7 +10,22 @@ interface Section {
   text?: string | null;
 }
 
-interface Tile {
-  alt: string;
-  src: string;
+export interface Project {
+  collaborators?: {[key: string]: string} | null;
+  content: Section[];
+  link: string;
+  press?: {[key: string]: string} | null;
+  role: string;
+  tile: Tile;
+  title: string;
+  url: string;
+}
+
+export interface ScrollData {
+  previousScrollTop: number;
+  currentScrollTop: number;
+}
+
+export interface ScrollCallback {
+  (scrollData: ScrollData): void
 }

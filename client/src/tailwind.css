@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  min-width: 500px;
+  min-width: 300px;
 }
 
 svg {
@@ -13,3 +13,88 @@ svg {
 svg:hover {
   fill: red;
 }
+
+@media (min-width: 1280px) {
+  .wrapper {
+    margin: 0px 150px
+  }
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.headerMobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  color: #333;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.headerMobile.shadowMobile {
+  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
+}
+
+
+.headerMobile.hiddenMobile {
+  transform: translateY(-110%);
+}
+
+.headerXL {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: black;
+  visibility: visible;
+  opacity: 1;
+  /* transform: translateY(0); */
+  transition: opacity 1s ease;
+}
+
+/* .headerXL.shadowXL {
+  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
+} */
+
+.headerXL.hiddenXL {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s ease;
+}
+
+
+
+.logo {
+  margin: 0 24px;
+  font-size: 20px;
+  color: #f59596;
+}
+
+.links {
+  padding: 0;
+  margin: 0 24px;
+}
+
+.link-item {
+  display: inline-block;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.section {
+  height: 100%;
+  /* min-height: 2000px; */
+  background-color: white;
+  /* padding-top: 131px; */
+  margin: 0 auto;
+  padding: 70px 30px 30px;
+}
+

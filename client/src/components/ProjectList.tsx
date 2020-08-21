@@ -2,17 +2,17 @@ import React, { FC } from 'react';
 import { v4 as uuid } from 'uuid';
 
 import { projects, displayOrder } from '../projectData';
-import ProjectIcon from './ProjectTile';
+import ProjectTile from './ProjectTile';
 
 interface ProjectListProps {
 }
 
 const ProjectList: FC<ProjectListProps> = () => {
   return (
-    <div className="flex flex-wrap my-4 justify-center mx-10">
+    <div className="flex flex-wrap justify-center">
       {displayOrder.map(project => {
         return (
-          <ProjectIcon project={projects[project]} key={uuid()} />
+          <ProjectTile project={projects[project]} key={uuid()} />
         );
       })}
     </div>
