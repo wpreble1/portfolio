@@ -10,7 +10,7 @@ interface NavProps {
 
 const Nav: FC<NavProps> = ({ toggleSlideDrawer }): ReactElement => {
   return (
-    <nav className="flex items-center justify-between bg-blue-100 px-2 py-4">
+    <nav className="flex items-center justify-between bg-blue-100 px-8 py-4">
       <div className="flex items-center flex-shrink-0 mx-6">
         <span className="font-semibold text-xl tracking-tight uppercase font-mono">
           <Link to="/">Will Preble</Link>
