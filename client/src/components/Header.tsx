@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import useDocumentScrollThrottled from './useDocumentScrollThrottled';
 
 import { ScrollData } from './types';
-// import {
-//   LinkedIn, Github, DevTo, CodeWars,
-// } from '../logos';
+import {
+  LinkedIn, Github, DevTo, CodeWars,
+} from '../logos';
 
 interface HeaderProps {
 }
@@ -33,12 +33,46 @@ const Header: FC<HeaderProps> = (): ReactElement => {
   const hiddenStyle = hideHeader ? 'hiddenMobile' : '';
 
   return (
-    <header className={`headerMobile ${shadowStyle} ${hiddenStyle} xl:hidden`}>
-      <div className="logo">Will Preble</div>
+    <header className={`headerMobile ${shadowStyle} ${hiddenStyle} lg:hidden`}>
+      <div className="logo"><Link className="" to="/">WP</Link></div>
+      <div className="logos">
+        <a
+          className="m-1 inline-block"
+          href="https://www.linkedin.com/in/will-preble/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedIn />
+        </a>
+        <a
+          className="m-1 inline-block"
+          href="https://github.com/wpreble1/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github />
+        </a>
+        <a
+          className="m-1 inline-block"
+          href="https://dev.to/wpreble1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <DevTo />
+        </a>
+        <a
+          className="m-1 inline-block"
+          href="https://www.codewars.com/users/wpreble1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CodeWars />
+        </a>
+      </div>
       <ul className="links">
-        <li className="link-item">Projects</li>
-        <li className="link-item">Info</li>
-        <li className="link-item">Resume</li>
+        <li className="inline-block m-1"><Link className="left" to="/projects">Projects</Link></li>
+        <li className="inline-block m-1"><Link className="left" to="/info">Info</Link></li>
+        <li className="inline-block m-1"><Link className="left" to="/resume">Resume</Link></li>
       </ul>
 
     </header>
