@@ -11,7 +11,7 @@ const LinkText: FC<LinkTextProps> = ({
 }): ReactElement => {
   return (
     <li>
-      <a className="" href={link} target="_blank" rel="noreferrer">{text}</a>
+      <a className="" href={link} target="_blank" rel="noreferrer noopener">{text}</a>
     </li>
   );
 };

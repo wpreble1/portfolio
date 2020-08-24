@@ -6,7 +6,14 @@ interface LinkButtonProps {
 
 const LinkButton: FC<LinkButtonProps> = ({ link }): ReactElement => {
   return (
-    <a className="uppercase" href={link} target="_blank" rel="noreferrer">Live Site</a>
+    <a
+      className="uppercase"
+      href={link}
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      Link
+    </a>
   );
 };
 
