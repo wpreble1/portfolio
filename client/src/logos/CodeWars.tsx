@@ -3,11 +3,10 @@ import React, { FC } from 'react';
 const CodeWars: FC = () => {
   return (
     <svg
+      className="w-4 lg:w-6 grow"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       focusable="false"
-      width="24"
-      height="24"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 24 24"
     >
