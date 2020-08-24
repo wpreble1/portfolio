@@ -1,4 +1,5 @@
 import React, { FC, ReactElement } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Project } from '../components/types';
 
@@ -12,20 +13,35 @@ const ProjectPage: FC<ProjectPageProps> = ({ project }): ReactElement => {
   const { content, title } = project;
 
   return (
-    <div 
-      className="p-8 mx-auto"
-      style={{ maxWidth: '900px' }}
+    <div
+      className="mx-auto section lg:p-0"
     >
-      {/* Project Title */}
-      <h1 className="uppercase text-xl pb-4 font-mono">{title}</h1>
-
-      {/* Link Button */}
-      {project.link && <LinkButton link={project.link} />}
-
       {/* Content */}
-      {content.map((section) => {
+      {content.map((section, index) => {
+        if (index === 0) {
+          return (
+            <div className="">
+              <img
+                className="mx-auto w-full object-cover"
+                style={{ minWidth: '300px', height: '100vh' }}
+                src={section.imageSrc as string}
+                alt={section.alt as string}
+              />
+              <div className="wrapper">
+                <div className="flex justify-between items-baseline">
+                  <h1 className="uppercase text-xl font-sans pt-4 inline-block">{title}</h1>
+                  {/* Link Button */}
+                  <div className="inline-block">
+                    {project.link && <LinkButton link={project.link} />}
+                  </div>
+                </div>
+                {section.text && <p className="block">{section.text}</p>}
+              </div>
+            </div>
+          );
+        }
         return (
-          <div>
+          <div className="wrapper">
             {section.text && <p>{section.text}</p>}
             {section.imageSrc && (
               <img
@@ -41,7 +57,7 @@ const ProjectPage: FC<ProjectPageProps> = ({ project }): ReactElement => {
 
       {/* Collaborator Links */}
       {project.collaborators && (
-        <div>
+        <div className="wrapper">
           <h2 className="uppercase">Collaborators</h2>
           {Object.keys(project.collaborators).map((name) => {
             return (
@@ -58,7 +74,7 @@ const ProjectPage: FC<ProjectPageProps> = ({ project }): ReactElement => {
 
       {/* Press Links */}
       {project.press && (
-        <div>
+        <div className="wrapper">
           <h2 className="uppercase py-2">Press</h2>
           <ul>
             {Object.keys(project.press).map(story => {
@@ -72,6 +88,10 @@ const ProjectPage: FC<ProjectPageProps> = ({ project }): ReactElement => {
           </ul>
         </div>
       )}
+      {/* <div className="footer-feature">
+        <p className="text-xs left-align">Featured Project</p>
+        <Link to="/up-close"><p className="text-xl left-align">Up Close</p></Link>
+      </div> */}
     </div>
   );
 };
