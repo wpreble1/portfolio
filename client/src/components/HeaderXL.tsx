@@ -29,21 +29,21 @@ const HeaderXL: FC<HeaderXLProps> = (): ReactElement => {
   const hiddenStyle = hideHeader ? 'fade-out' : '';
 
   return (
-    <header className={`hidden lg:block headerXL p-12 ${hiddenStyle}`}>
+    <header className={`hidden lg:block fixed top-0 left-0 headerXL p-12 ${hiddenStyle}`}>
       <ul className="block text-lg">
         <li className="py-1">
-          <Link className="left" to="/projects">
+          <Link className="left-underline" to="/projects">
             Projects
           </Link>
         </li>
         <li className="py-1">
-          <Link className="left" to="/info">
+          <Link className="left-underline" to="/info">
             Info
           </Link>
         </li>
         <li className="py-1">
           <a
-            className="left"
+            className="left-underline"
             href={`${process.env.PUBLIC_URL}/resume.pdf`}
             target="_blank"
             rel="noreferrer noopener"
@@ -52,7 +52,7 @@ const HeaderXL: FC<HeaderXLProps> = (): ReactElement => {
           </a>
         </li>
       </ul>
-      <div className="block logosXL mt-24">
+      <div className="block fixed mt-24 logo-links">
         <a
           className="pl-2 items-center"
           href="https://www.linkedin.com/in/will-preble/"
@@ -88,7 +88,7 @@ const HeaderXL: FC<HeaderXLProps> = (): ReactElement => {
       </div>
 
       <Link to="/">
-        <div className="logoXL text-lg tracking-widest">WP</div>
+        <div className="hover:text-pink text-lg tracking-widest font-serif fixed nameXL">WP</div>
       </Link>
     </header>
   );

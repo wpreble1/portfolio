@@ -33,8 +33,8 @@ const Header: FC<HeaderProps> = (): ReactElement => {
   const hiddenStyle = hideHeader ? 'hiddenMobile' : '';
 
   return (
-    <header className={`headerMobile ${shadowStyle} ${hiddenStyle} lg:hidden`}>
-      <div className="logo"><Link className="" to="/">WP</Link></div>
+    <header className={`headerMobile fixed top-0 left-0 flex items-center justify-between w-full h-16 bg-white ${shadowStyle} ${hiddenStyle} lg:hidden`}>
+      <div className="text-lg mx-6 hover:text-pink"><Link className="" to="/">WP</Link></div>
       <div className="logos">
         <a
           className="m-1 inline-block"
@@ -69,10 +69,10 @@ const Header: FC<HeaderProps> = (): ReactElement => {
           <CodeWars />
         </a>
       </div>
-      <ul className="links">
-        <li className="inline-block m-1"><Link className="left" to="/projects">Projects</Link></li>
-        <li className="inline-block m-1"><Link className="left" to="/info">Info</Link></li>
-        <li className="inline-block m-1"><Link className="left" to="/resume">Resume</Link></li>
+      <ul className="p-0 mx-6">
+        <li className="inline-block m-1"><Link className="left-underline" to="/projects">Projects</Link></li>
+        <li className="inline-block m-1"><Link className="left-underline" to="/info">Info</Link></li>
+        <li className="inline-block m-1"><Link className="left-underline" to="/resume">Resume</Link></li>
       </ul>
 
     </header>
