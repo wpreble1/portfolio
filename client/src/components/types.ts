@@ -3,9 +3,16 @@ interface Tile {
   src: string;
 }
 
+interface Cover {
+  alt: string;
+  imageSrc: string[] | string | null;
+  imageCredit?: string | null;
+  fullscreen: boolean;
+}
+
 interface Section {
-  alt?: string | null;
-  imageSrc?: string | null;
+  alt?: string[] | string | null;
+  imageSrc?: string[] | string | null;
   imageCredit?: string | null;
   text?: string | null;
 }
@@ -13,6 +20,8 @@ interface Section {
 export interface Project {
   collaborators?: {[key: string]: string} | null;
   content: Section[];
+  cover: Cover;
+  github?: string;
   link: string;
   press?: {[key: string]: string} | null;
   role: string;
