@@ -6,35 +6,8 @@ body {
   min-width: 300px;
 }
 
-svg {
-  fill: darkslateblue
-}
-
-svg:hover {
-  fill: red;
-}
-
-@media (min-width: 1280px) {
-  .wrapper {
-    margin: 0px 150px
-  }
-}
-
-.wrapper {
-  height: 100%;
-}
-
+/* Mobile header */
 .headerMobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 70px;
-  background-color: #fff;
-  color: #333;
   transform: translateY(0);
   transition: transform 0.3s ease;
 }
@@ -43,58 +16,74 @@ svg:hover {
   box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
 }
 
-
 .headerMobile.hiddenMobile {
   transform: translateY(-110%);
 }
 
+/* Desktop header */
 .headerXL {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  color: black;
-  visibility: visible;
-  opacity: 1;
-  /* transform: translateY(0); */
   transition: opacity 1s ease;
 }
 
-/* .headerXL.shadowXL {
-  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
-} */
-
-.headerXL.hiddenXL {
+.headerXL.fade-out {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s .5s, opacity .5s ease;
 }
 
-
-
-.logo {
-  margin: 0 24px;
-  font-size: 20px;
-  color: #f59596;
+.nameXL {
+  transform: rotate(-90deg);
+  bottom: 90px;
+  left: 60px;
+  transition: opacity 1s ease;
 }
 
-.links {
-  padding: 0;
-  margin: 0 24px;
+/* Logo links (Github, LinkedIn, etc.) */
+svg {
+  fill: black
 }
 
-.link-item {
-  display: inline-block;
-  margin: 0 12px;
-  cursor: pointer;
+svg:hover {
+  fill: #794ACF;
 }
 
-.section {
-  height: 100%;
-  /* min-height: 2000px; */
-  background-color: white;
-  /* padding-top: 131px; */
-  margin: 0 auto;
-  padding: 70px 30px 30px;
+.logo-links {
+  right: 80px;
 }
 
+/* Logo links - Large screen sizes */
+@media (min-width: 1024px) {
+  .grow { transition: all .2s ease-in-out; }
+  .grow:hover { transform: scale(1.3); }
+}
+
+/* Link underline animation */
+a.left-underline {
+  position: relative;
+}
+
+a.left-underline:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: magenta;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.left-underline:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+/* Footer feature (unfinished) */
+.footer-feature {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 340px;
+  line-height: 50px;
+}
