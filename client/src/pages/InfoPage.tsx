@@ -1,9 +1,12 @@
 import React, { FC, ReactElement } from 'react';
 
+import test from '../images/uc/uc-tile.jpg';
+
 const InfoPage: FC = (): ReactElement => {
   return (
-    <div className="wrapper">
-      <div className="h-full bg-white my-0 mx-auto section">
+    <div className="h-full lg:mx-40">
+      <div className="h-full bg-white my-0 mx-auto pt-16 px-6 pb-6 lg:pt-24 lg:px-12">
+        <img src={test} alt="" />
         <h1>Will Preble</h1>
         <h2>Bio</h2>
         <p>Will is a full-stack developer currently looking for work in Los Angeles.</p>
