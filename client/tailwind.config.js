@@ -7,6 +7,12 @@ module.exports = {
     'public/**/*.html',
   ],
   theme: {
+    colors: {
+      pink: 'magenta',
+      purple: '#794ACF',
+      white: 'white',
+      black: 'black',
+    },
     extend: {
       fontSize: {
         xs: ['10px', '16px'],
