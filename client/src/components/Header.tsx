@@ -37,7 +37,7 @@ const Header: FC<HeaderProps> = (): ReactElement => {
       <ul className="p-0 mr-6">
         <li className="inline-block mx-1"><Link className="left-underline" to="/projects">Projects</Link></li>
         <li className="inline-block mx-1"><Link className="left-underline" to="/info">Info</Link></li>
-        <li className="inline-block mx-1"><Link className="left-underline" to="/resume">Resume</Link></li>
+        <li className="inline-block mx-1"><Link className="left-underline" to="/resume">Tester</Link></li>
       </ul>
 
     </header>
