@@ -61,7 +61,7 @@ const HeaderXL: FC<HeaderXLProps> = ({ fullCover }): ReactElement => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            Resume
+            Test
           </a>
         </li>
       </ul>
