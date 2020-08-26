@@ -10,8 +10,8 @@ const LinkText: FC<LinkTextProps> = ({
   text,
 }): ReactElement => {
   return (
-    <li>
-      <a className="" href={link} target="_blank" rel="noreferrer noopener">{text}</a>
+    <li className="px-4">
+      <a className="text-sm hover:text-purple" href={link} target="_blank" rel="noreferrer noopener">{text}</a>
     </li>
   );
 };

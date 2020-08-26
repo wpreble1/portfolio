@@ -11,7 +11,7 @@ const ProjectIcon: FC<ProjectIconProps> = ({ project }) => {
   const { tile, title, url, role } = project;
   const { alt, src } = tile;
   return (
-    <div className="pb-8 w-full md:w-1/2 md:p-8 lg:p-12 hover:text-purple">
+    <div className="pb-8 w-full md:w-1/2 md:p-8 lg:w-1/3 lg:p-12 hover:text-purple">
       <Link to={`/${url}`}>
         <img className="w-full shadow-md" src={src} alt={alt} />
         <div className="flex items-baseline justify-between">
