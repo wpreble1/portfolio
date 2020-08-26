@@ -27,6 +27,7 @@ export interface Project {
   role: string;
   tile: Tile;
   title: string;
+  techs?: string[];
   url: string;
 }
 
