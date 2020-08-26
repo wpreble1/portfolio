@@ -3,7 +3,12 @@ import { v4 as uuid } from 'uuid';
 
 import { Project } from '../components/types';
 
-import { LinkButton, LinkText, Slideshow, TechStack } from '../components';
+import {
+  LinkButton,
+  LinkText,
+  Slideshow,
+  TechStack,
+} from '../components';
 
 interface ProjectPageProps {
   project: Project;
