@@ -1,16 +1,26 @@
-import React, { FC, ReactElement, useState } from 'react';
+import React, { FC, ReactElement, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import useDocumentScrollThrottled from './useDocumentScrollThrottled';
+import useDocumentScrollThrottled from '../hooks/useDocumentScrollThrottled';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 
 import { ScrollData } from './types';
-import { LinkedIn, Github, DevTo, CodeWars } from '../logos';
+import { LogoLinksXL } from '.';
 
-interface HeaderXLProps {}
+interface HeaderXLProps {
+  fullCover: boolean;
+}
 
-const HeaderXL: FC<HeaderXLProps> = (): ReactElement => {
+const HeaderXL: FC<HeaderXLProps> = ({ fullCover }): ReactElement => {
   const [hideHeader, setHideHeader] = useState(false);
   const [, setShowShadow] = useState(false);
+  const [invertHeader, setInvertHeader] = useState(fullCover);
+
+  useEffect(() => {
+    setInvertHeader(fullCover);
+  }, [fullCover]);
+
+  const { height } = useWindowDimensions();
 
   const MINIMUM_SCROLL = 80;
   const TIMEOUT_DELAY = 0;
@@ -19,6 +29,9 @@ const HeaderXL: FC<HeaderXLProps> = (): ReactElement => {
     const { previousScrollTop, currentScrollTop } = callbackData;
     const isScrolledDown = previousScrollTop < currentScrollTop;
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+
+    setInvertHeader(currentScrollTop < height);
+
     setShowShadow(currentScrollTop > 2);
 
     setTimeout(() => {
@@ -29,7 +42,7 @@ const HeaderXL: FC<HeaderXLProps> = (): ReactElement => {
   const hiddenStyle = hideHeader ? 'fade-out' : '';
 
   return (
-    <header className={`hidden lg:block fixed top-0 left-0 headerXL p-12 ${hiddenStyle}`}>
+    <header className={`hidden lg:block fixed top-0 left-0 headerXL p-12 ${hiddenStyle} ${invertHeader ? 'text-white' : 'text-black'}`}>
       <ul className="block text-lg">
         <li className="py-1">
           <Link className="left-underline" to="/projects">
@@ -52,40 +65,8 @@ const HeaderXL: FC<HeaderXLProps> = (): ReactElement => {
           </a>
         </li>
       </ul>
-      <div className="block fixed mt-24 logo-links">
-        <a
-          className="pl-2 items-center"
-          href="https://www.linkedin.com/in/will-preble/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedIn />
-        </a>
-        <a
-          className="pl-2"
-          href="https://github.com/wpreble1/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Github />
-        </a>
-        <a
-          className="pl-2"
-          href="https://dev.to/wpreble1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <DevTo />
-        </a>
-        <a
-          className="pl-2"
-          href="https://www.codewars.com/users/wpreble1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CodeWars />
-        </a>
-      </div>
+
+      <LogoLinksXL fill={invertHeader ? 'white' : 'black'} />
 
       <Link to="/">
         <div className="hover:text-pink text-lg tracking-widest font-serif fixed nameXL">WP</div>

@@ -1,14 +1,16 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, ReactElement, useState } from 'react';
 // import { Route, Switch } from 'react-router-dom';
 
-import { Body, Header, HeaderXL } from './components';
+import { Body, Header, HeaderXL, HeaderXL2 } from './components';
 
 const App: FC = (): ReactElement => {
+  const [fullCover, setFullCover] = useState(false);
+
   return (
     <div className="">
       <Header />
-      <HeaderXL />
-      <Body />
+      {fullCover ? <HeaderXL fullCover={fullCover} /> : <HeaderXL2 fullCover={fullCover} />}
+      <Body setFullCover={setFullCover} />
     </div>
   );
 };
