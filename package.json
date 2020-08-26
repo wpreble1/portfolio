@@ -4,11 +4,9 @@
   "description": "A portfolio of professional, creative, and personal work.",
   "main": "index.js",
   "scripts": {
-    "start": "node build/index.js",
-    "server": "ts-node server/index.ts",
-    "build": "rm -rf build && tsc --watch",
-    "iall": "npm i && npm --prefix client i",
-    "startboth": "npm run server & npm run client"
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "node build/index.js"
   },
   "repository": {
     "type": "git",
