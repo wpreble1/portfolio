@@ -1,20 +1,39 @@
 import React, { FC, ReactElement } from 'react';
 
+import { LinkText } from '../components';
+
 import test from '../images/uc/uc-tile.jpg';
 
-const InfoPage: FC = (): ReactElement => {
+interface InfoPageProps {
+  setFullCover: any;
+}
+
+const InfoPage: FC<InfoPageProps> = ({ setFullCover }): ReactElement => {
+  setFullCover(false);
+
   return (
-    <div className="h-full lg:mx-40">
+    <div className="h-full lg:mx-40 pb-8">
       <div className="h-full bg-white my-0 mx-auto pt-16 px-6 pb-6 lg:pt-24 lg:px-12">
-        <img src={test} alt="" />
-        <h1>Will Preble</h1>
-        <h2>Bio</h2>
-        <p>Will is a full-stack developer currently looking for work in Los Angeles.</p>
-        <h2>Contact</h2>
-        <ul>
-          <li className="text-sm"><a href="mailto:wpreble1@gmail.com" target="_blank" rel="noreferrer noopener">Email</a></li>
-          <li className="text-sm"><a href="https://linkedin.com/in/will-preble/" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
-          <li className="text-sm"><a href="https://github.com/wpreble1/" target="_blank" rel="noreferrer noopener">Github</a></li>
+        <img className="pb-8" src={test} alt="" />
+        <h2 className="uppercase">Bio</h2>
+        <p className="pt-4">
+          I&apos;m a full-stack developer currently looking for work in Los
+          Angeles.
+        </p>
+        <h2 className="uppercase pt-8 pb-1">Contact</h2>
+        <ul className="list-none">
+          <LinkText
+            link="mailto:wpreble1@gmail.com"
+            text="Email"
+          />
+          <LinkText
+            link="https://linkedin.com/in/will-preble/"
+            text="LinkedIn"
+          />
+          <LinkText
+            link="https://github.com/wpreble1/"
+            text="Github"
+          />
         </ul>
       </div>
     </div>
