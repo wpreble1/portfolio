@@ -39,8 +39,12 @@ body {
 }
 
 /* Logo links (Github, LinkedIn, etc.) */
-svg {
+.fill-black {
   fill: black
+}
+
+.fill-white {
+  fill: white
 }
 
 svg:hover {
