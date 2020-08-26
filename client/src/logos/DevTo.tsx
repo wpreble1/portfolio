@@ -1,9 +1,13 @@
 import React, { FC } from 'react';
 
-const CodeWars: FC = () => {
+interface LogoProps {
+  classes: string;
+}
+
+const DevTo: FC<LogoProps> = ({ classes }) => {
   return (
     <svg
-      className="rounded w-4 lg:w-6 grow"
+      className={classes}
       xmlns="http://www.w3.org/2000/svg"
       version="1"
       viewBox="0 0 408 410"
@@ -14,4 +18,4 @@ const CodeWars: FC = () => {
   );
 };
 
-export default CodeWars;
+export default DevTo;
