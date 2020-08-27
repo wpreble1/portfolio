@@ -293,7 +293,7 @@ const arthurAsheStadium: Project = {
       imageSrc: aas1,
       imageCredit: null,
       text:
-        'As a mechanical design engineer with ME-Engineers under the direction of Michael Tortorella, P.E., an innovative air distribution system was designed and modeled for the retractable roof upgrade of Arthur Ashe Stadium. A ring of spiral ductwork over six feet in diameter circles the entire bowl of the stadium, distributing air from the upper deck to the court itself. The system debuted successfully at the 2016 US Open.',
+        'As a mechanical design engineer with ME-Engineers under the direction of Michael Tortorella, P.E., I designed and modeled an innovative air distribution system for the retractable roof upgrade of Arthur Ashe Stadium. A ring of spiral ductwork over six feet in diameter circles the entire bowl of the stadium, distributing air from the upper deck to the court itself. The system debuted successfully at the 2016 US Open.',
     },
     {
       imageSrc: aas2,
@@ -330,7 +330,7 @@ const fourTimesSquare: Project = {
       imageSrc: null,
       imageCredit: 'https://www.instagram.com/lightsensitivity/',
       text:
-        'As a mechanical design engineer with ME-Engineers under the direction of Michael Tortorella, P.E., an infrastructure upgrade was designed and modeled for the heating and chilled water plant in the 4 Times Square tower formerly known as the Condé Nast building. Gas-fired absorption heaters and chillers were removed and replaced with separate high efficiency, modular chiller and condensing hot water boiler plants.',
+        'As a mechanical design engineer with ME-Engineers under the direction of Michael Tortorella, P.E., I designed and modeled an infrastructure upgrade for the heating and chilled water plant in the 4 Times Square tower formerly known as the Condé Nast building. Gas-fired absorption heaters and chillers were removed and replaced with separate high efficiency, modular chiller and condensing hot water boiler plants.',
     },
   ],
   url: 'times-square',
