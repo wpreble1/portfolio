@@ -40,14 +40,14 @@ const LogoLinksXL: FC<LogoLinksXLProps> = ({ fill }): ReactElement => {
       >
         <DevTo classes={classes} />
       </a>
-      {/* <a
+      <a
         className="pl-2"
         href="https://www.codewars.com/users/wpreble1"
         target="_blank"
         rel="noopener noreferrer"
       >
         <CodeWars classes={classes} />
-      </a> */}
+      </a>
     </div>
   );
 };
