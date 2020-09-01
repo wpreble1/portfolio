@@ -42,7 +42,7 @@ const TechStack: FC<TechStackProps> = ({ techs }): ReactElement => {
   };
 
   return (
-    <div className="">
+    <div className="mt-8">
       <h1 className="uppercase text-md">Tech Stack</h1>
       <div className="mx-auto">
         {techs.map(tech => {
