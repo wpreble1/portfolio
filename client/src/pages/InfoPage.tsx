@@ -19,7 +19,7 @@ const InfoPage: FC<InfoPageProps> = ({ setFullCover }): ReactElement => {
           I&apos;m a full-stack developer currently looking for work in Los
           Angeles.
         </p>
-        <img className="p-8" src={info} alt="" />
+        <img className="p-8 lg:pr-64 lg:py-12" src={info} alt="" />
         <h2 className="uppercase pb-1">Contact</h2>
         <ul className="list-none">
           <LinkText
