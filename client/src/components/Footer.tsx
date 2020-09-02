@@ -7,10 +7,10 @@ interface FooterProps {
 const Footer: FC<FooterProps> = (): ReactElement => {
 
   return (
-    <footer className="w-full h-64 mx-auto flex bg-gray-100">
-      <div className="text-black  text-xs justify-center mx-auto align-middle inline-block p-32 tracking-widest">
-        copyright &copy;
-        <Link to="/"> will preble 2020</Link>
+    <footer className="w-full h-32 mx-auto flex">
+      <div className="text-black  text-xs justify-center mx-auto align-middle inline-block p-16 tracking-widest">
+        Copyright &copy;
+        <Link to="/"> Will Preble 2020</Link>
       </div>
     </footer>
   );
