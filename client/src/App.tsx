@@ -2,7 +2,7 @@ import React, { FC, ReactElement, useState } from 'react';
 // import { Route, Switch } from 'react-router-dom';
 
 import { Body, Header, HeaderXL, HeaderXL2 } from './components';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 const App: FC = (): ReactElement => {
   const [fullCover, setFullCover] = useState(false);
@@ -12,7 +12,7 @@ const App: FC = (): ReactElement => {
       <Header />
       {fullCover ? <HeaderXL fullCover={fullCover} /> : <HeaderXL2 fullCover={fullCover} />}
       <Body setFullCover={setFullCover} />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
